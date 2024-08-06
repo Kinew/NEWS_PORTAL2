@@ -1,13 +1,14 @@
-from django.shortcuts import render
+# from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from datetime import datetime
+from .models import News
 
-# Create your views here.
 class NewsList(ListView):
     model = Post
     ordering = '-dateCreations'
     template_name = 'flatpages/News.html'
     context_object_name = 'posts'
     paginate_by = 2
-# Create your views here.
 
 
     def get_queryset(self):
