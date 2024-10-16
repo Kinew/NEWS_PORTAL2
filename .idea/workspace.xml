@@ -5,11 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb25e54-c25f-4c6f-9ad1-805750f1c7bc" name="Changes" comment="Update project">
+      <change afterPath="$PROJECT_DIR$/News_Portal/News_Portal/celery.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/accounts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/frages/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/news/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/news/management/commands/runapscheduler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/news/translation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/category_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/daily_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/news_create_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/news_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/news_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/post_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/post_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/News_Portal/templates/registration/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/News_Portal/News_Portal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/News_Portal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/News_Portal/News_Portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/News_Portal/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/News_Portal/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/News_Portal/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/news/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/News_Portal/news/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/news/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/News_Portal/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/News_Portal/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/news/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/News_Portal/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/news/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/News_Portal/templates/flatpages/News.html" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/templates/flatpages/News.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/News_Portal/templates/flatpages/News.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/News_Portal/templates/flatpages/News_Detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/News_Portal/templates/subscriptions.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722868962062</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update project">
+      <option name="closed" value="true" />
+      <created>1722971625813</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722971625813</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

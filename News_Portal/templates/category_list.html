@@ -1,0 +1,82 @@
+{% extends 'flatpages/default.html' %}
+
+{% load i18n %}
+
+{% load custom_filters %}
+<!-- Подключаем новый файл с нашим тегом -->
+{% load custom_tags %}
+
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+   <h1 class="text-center">Все новости<span class="text- muted fs-6 fw-normal"> Всего: {{page_obj.paginator.count}}</span><h1>
+   {% if is_not_subscriber%}
+       <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="atn btn-secondary btn-sm">Подписаться</a></p>
+   {% endif %}
+   <h3>{% current_time '%b %d %Y %A' %}</h3>
+   <!-- Если в переменной next_sale будет None,
+   то выведется указанный в фильтре текст -->
+   <h3> {{ next_sale|default_if_none:"Чуть позже сообщим о свежих новостях!!" }} </h3>
+
+
+ <form action="" method="get" >
+    {{ filterset.form.non_field_errors }}
+
+    {{ filterset.form.name__icontains.errors }}
+    <label for="{{ filterset.form.name__icontains.id_for_label }}">Search</label>
+    <input
+        id="{{ filterset.form.name__icontains.id }}"
+        name="{{ filterset.form.name__icontains.name }}"
+        value="{{ filterset.form.name__icontains.value }}"
+        class="form-control"
+    >
+    <input type="submit" class="mt-3 btn-primary" value="Найти" />
+</form>
+
+   <hr>
+   {% if news %}
+       <table>
+           <tr>
+               <td>Заголовок</td>
+               <td>Дата публикации</td>
+               <td>Категория</td>
+               <td>Добавить</td>
+           </tr>
+
+           {% for news in news %}
+           <a href="{% url'category_list' category id %}">{{ category }}</a>
+           <tr>
+               <td>{{ news.title }}</td>
+               <td>{{ news.text|truncatewords:20 }}</td>
+               <td>{{ news.category.name }}</td>
+               <td>{{ news.added_at.name }}</td>
+           </tr>
+           {% endfor %}
+
+       </table>
+   {% else %}
+       <h2>Новостей нет!</h2>
+   {% endif %}
+
+{% if page_obj.has_previous %}
+       {# Для каждой ссылки пагинации указываем обработку через новый тег #}
+       <a href="?{% url_replace page=1 %}">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {{ page_obj.number }}
+
+   {% if page_obj.has_next %}
+       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+
+{% endblock content %}
